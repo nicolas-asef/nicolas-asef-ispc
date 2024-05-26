@@ -1,0 +1,83 @@
+#ESTRUCTURAS CONDICIONALES:
+# IF
+#PSINT:
+
+Proceso NumeroPositivo
+    Escribir "Ingrese un número:"
+    Leer numero
+    Si numero > 0 Entonces
+        Escribir "El número es positivo."
+    FinSi
+FinProceso
+
+#2. Condicional completo (if - else) con expresión lógica simple
+
+#Pseudocódigo en PSeint:
+
+Proceso ParOImpar
+    Escribir "Ingrese un número:"
+    Leer numero
+    Si numero % 2 = 0 Entonces
+        Escribir "El número es par."
+    Sino
+        Escribir "El número es impar."
+    FinSi
+FinProceso
+
+
+#3. Condicional parcial (solo el if) con expresión lógica compuesta (and)
+
+#Pseudocódigo en PSeint
+
+Proceso Rango10a20
+    Escribir "Ingrese un número:"
+    Leer numero
+    Si numero >= 10 y numero <= 20 Entonces
+        Escribir "El número está en el rango de 10 a 20."
+    FinSi
+FinProceso
+
+#4. Condicional completo (if - else) con expresión lógica compuesta (or)
+
+#Pseudocódigo en PSeint
+
+Proceso NegativoOMayorQue100
+    Escribir "Ingrese un número:"
+    Leer numero
+    Si numero < 0 o numero > 100 Entonces
+        Escribir "El número es negativo o mayor que 100."
+    Sino
+        Escribir "El número está entre 0 y 100."
+    FinSi
+FinProceso
+
+#Implementación en Python
+
+#5. Ejemplo de la despensa de barrio
+
+#Pseudocódigo en PSeint
+
+Proceso CalcularCostoLeche
+    Escribir "Ingrese la cantidad de leche a comprar:"
+    Leer cantidad
+    Escribir "¿Es jubilado? (si/no):"
+    Leer jubilado
+    
+    costo_unitario <- 1000
+    descuento <- 0
+    
+    Si cantidad > 24 Entonces
+        descuento <- 0.15
+    Sino
+        Si cantidad > 12 Entonces
+            descuento <- 0.10
+        FinSi
+    FinSi
+    
+    Si jubilado = "si" Entonces
+        descuento <- descuento + 0.10
+    FinSi
+    
+    costo_total <- cantidad * costo_unitario * (1 - descuento)
+    Escribir "El costo total a pagar es:", costo_total
+FinProceso
